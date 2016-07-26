@@ -1,0 +1,96 @@
+<DOCTYPE! html>
+<head>
+	<meta charset="utf-8">
+	
+	<!--JQUERY -->
+<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>  
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="js/cpcalc.js"></script>
+<title> CP calculator </title>
+	<style>
+		input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+		.title {
+			
+			text-align: center;
+			font-weight: 900;
+			color:grey;
+			font-size: 5.4em;
+			font-family: 'Droid Sans';
+		}
+		.intro {
+			
+			text-align: center;
+			font-size: 2em;
+			font-family: 'Droid Sans';
+		}
+		.fr {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+		<div class="jumbotron">
+	<div class="container-fluid">
+<h1 class="title"> PokEvolve CP Calculator </h1>
+ <p class="intro bg-success"> PokEvolve is a program that can predict the <bold>range</bold>of values in which the <bold>CP</bold> or <bold>Combat Points</bold> of an evolved pokemon may lie. Give it a try below! </p>
+		<br>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-md-4">
+		       <div class="form-group fr">
+                <label>Intial CP: </label>
+                  <input type="text" class="form-control" id="cp">
+         </div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+              <div class="form-group fr">
+                <label>Height: </label>
+                <input type="text" class="form-control" id="h">
+              </div>
+		    </div>
+			<div class="col-md-2">
+            <div class="form-group fr">
+              <label>Weight: </label>
+               <input type="text" class="form-control" id="w">
+            </div>
+	       </div>
+		</div>
+			<div class="row">
+			<div class="col-md-4">
+		       <div class="form-group fr">
+                <label>Candies needed for evolution: </label>
+                  <input type="text" class="form-control" id="cd">
+         </div>
+			</div>
+		</div>
+		<button class="btn btn-success" id="sub"> Calculate </button>
+		<h4 style="font-family:'Droid Sans'"> <bold> Range: </bold> </h4>
+		<br>
+		<div class="well" id="result"><p>Range will appear here. </p></div>
+		<br>
+		<h1 class="title"> Some Tips: </h1><br>
+		 <ul class="list-group">
+  <li class="list-group-item list-group-item-info">Always Try to evolve pokemon which are extra-large (you can tell when a pokemon is extra large xasue it will have XL as a superscript to it's weight and height category). Pokemon with the XL tag are almost always in the higher range of combat points after evolution. </li><br>
+  <li class="list-group-item list-group-item-info">Don't evolve pokemon with the XS tag unless you really really really love them.</li><br>
+  <li class="list-group-item list-group-item-info">Normal pokemon without the XS or XL tag can go either way. Depends on your luck.</li><br>
+  <li class="list-group-item list-group-item-info">The above information will be updated if wrong.</li><br>
+			 <li class="list-group-item list-group-item-info">Want to contribute? Check out the project on <a href="http://www.github.com/Datron">github</a>.</li><br>
+</ul>
+	</div>
+	</div>
+</body>
+</html>
